@@ -1,0 +1,25 @@
+items:
+  - name: SDK do Azure para linguagem Go
+    href: index.yml
+  - name: Visão geral
+    items:
+      - name: Instalação
+        href: azure-sdk-go-install.md
+      - name: Ferramentas
+        href: azure-sdk-go-tools.md
+  - name: Guias de início rápido do SDK do Go
+    items:
+      - name: Máquinas Virtuais e Modelos de Recurso
+        href: azure-sdk-go-qs-vm.md
+      - name: Armazenamento do Blobs do Azure
+        href: /azure/storage/blobs/storage-quickstart-blobs-go?toc=%2fgo%2fazure%2ftoc.json
+      - name: Banco de Dados do Azure para PostgreSQL
+        href: /azure/postgresql/connect-go?toc=%2fgo%2fazure%2ftoc.json
+      - name: Banco de Dados do Azure para MySQL
+        href: /azure/mysql/connect-go?toc=%2fgo%2fazure%2ftoc.json
+      - name: Banco de Dados SQL do Azure
+        href: /azure/sql-database/sql-database-connect-query-go?toc=%2fgo%2fazure%2ftoc.json
+  - name: Exemplos
+    href: 'http://github.com/azure-samples/azure-sdk-for-go-samples'
+  - name: Referência de API
+    href: 'https://godoc.org/github.com/Azure/azure-sdk-for-go'
