@@ -1,4 +1,5 @@
-O SDK do Azure para Go é compatível com as versões 1.8 e mais recentes do Go. Para ambientes usando [Perfis do Azure Stack](https://docs.microsoft.com/en-us/azure/azure-stack/azure-stack-version-profiles), a versão 1.9 do Go é o requisito mínimo. Se você não tiver Go disponível em seu sistema, siga [as instruções de instalação do Go](https://golang.org/doc/install).
+O [SDK do Azure para Go](https://github.com/Azure/azure-sdk-for-go) é compatível com as versões 1.8 e mais recentes do Go. Para ambientes usando [Perfis do Azure Stack](https://docs.microsoft.com/en-us/azure/azure-stack/azure-stack-version-profiles), a versão 1.9 do Go é o requisito mínimo.
+Se você não tiver Go disponível em seu sistema, siga [as instruções de instalação do Go](https://golang.org/doc/install).
 
 Você pode obter o SDK do Azure para Go e suas dependências via `go get`.
 
