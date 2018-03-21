@@ -8,11 +8,11 @@ ms.date: 02/08/2018
 ms.topic: quickstart
 ms.devlang: go
 manager: routlaw
-ms.openlocfilehash: e530d944deca40e9e6c29b6c2768e2367822714e
-ms.sourcegitcommit: aaa8c37880332625f858a38f5918e6cf581bf48d
+ms.openlocfilehash: ae460dbf21b13c40f3d564274f8b790afe005aae
+ms.sourcegitcommit: af3473779cd7c2978f290fbdc51ee15eb1130840
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 03/15/2018
 ---
 # <a name="quickstart-deploy-an-azure-virtual-machine-from-a-template-with-the-azure-sdk-for-go"></a>Início rápido: implantar uma máquina virtual do Azure de um modelo com o SDK do Azure para linguagem Go
 
@@ -32,7 +32,7 @@ Se você usa uma instalação local da CLI do Azure, este início rápido requer
 
 ## <a name="create-a-service-principal"></a>Criar uma entidade de serviço
 
-Para efetuar logon em modo não interativo com um aplicativo, você precisa de uma entidade de serviço. As entidades de serviço fazem parte da Autenticação Baseada em Função (RBAC), que cria uma identidade de usuário exclusiva. Para criar uma nova entidade de serviço com a CLI, execute o comando a seguir:
+Para efetuar logon em modo não interativo com um aplicativo, você precisa de uma entidade de serviço. As entidades de serviço fazem parte do controle de acesso baseado em função (RBAC), que cria uma identidade de usuário exclusiva. Para criar uma nova entidade de serviço com a CLI, execute o comando a seguir:
 
 ```azurecli-interactive
 az ad sp create-for-rbac --name az-go-vm-quickstart
@@ -40,7 +40,7 @@ az ad sp create-for-rbac --name az-go-vm-quickstart
 
 __Não se esqueça__ de registrar `appId`, `password` e os valores de `tenant` na saída. Esses valores são usados pelo aplicativo a ser autenticado com o Azure.
 
-Para obter mais informações sobre a criação e o gerenciamento de Entidades de Serviço com a CLI 2.0 do Azure, confira [Criar uma entidade de serviço com a CLI 2.0 do Azure](/cli/azure/create-an-azure-service-principal-azure-cli).
+Para obter mais informações sobre a criação e o gerenciamento de entidades de serviço com a CLI 2.0 do Azure, confira [Criar uma entidade de serviço com a CLI 2.0 do Azure](/cli/azure/create-an-azure-service-principal-azure-cli).
 
 ## <a name="get-the-code"></a>Obter o código
 
@@ -79,7 +79,7 @@ Você também precisa editar um valor no arquivo `vm-quickstart-params.json`.
     }
 ```
 
-* `vm_password`: A senha para a conta de usuário da VM. Ela deve ter de 6 a 72 caracteres de comprimento e conter 3 dos seguintes caracteres:
+* `vm_password`: A senha para a conta de usuário da VM. Ela deve ter de 12 a 72 caracteres de comprimento e conter 3 dos seguintes caracteres:
   * Uma letra minúscula
   * Uma letra maiúscula
   * Um número
