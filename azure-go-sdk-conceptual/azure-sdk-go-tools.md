@@ -9,11 +9,12 @@ ms.topic: conceptual
 ms.prod: azure
 ms.technology: azure-sdk-go
 ms.devlang: go
-ms.openlocfilehash: 2ea44fb8a4fdd6098bb44d3b5092cfbc352b424d
-ms.sourcegitcommit: f08abf902b48f8173aa6e261084ff2cfc9043305
+ms.openlocfilehash: 1e122ab161766023ea146329a5edb13143699b8b
+ms.sourcegitcommit: b81b17cbb934399c195bfdcb87137aee935f5234
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34755525"
 ---
 # <a name="tools-for-developers-using-the-azure-sdk-for-go"></a>Ferramentas para desenvolvedores usando o SDK do Azure para linguagem Go
 
@@ -40,10 +41,3 @@ Há muitas maneiras de gerenciar suas dependências de pacote e fazer vendoring 
 
 > [!div class="nextstepaction"]
 > [Obter o gerente de dependência de dep](https://github.com/tools/godep)
-
-## <a name="telemetry-with-application-insights"></a>Telemetria com o Application Insights
-
-[Application Insights](https://azure.microsoft.com/en-us/services/application-insights/) é um produto de análise que permite que você colete facilmente informações de telemetria de aplicativos e que se integra com o ecossistema do Azure, Visual Studio Team Services e GitHub. Ele pode ser usado em muitos aplicativos, e a Microsoft oferece um SDK Go para trabalhar com o Application Insights.
-
-> [!div class="nextstepaction"]
-> [Obtenha o Application Insights para o SDK Go](https://github.com/Microsoft/ApplicationInsights-Go) 
