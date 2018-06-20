@@ -2,7 +2,7 @@
 documentType: LandingData
 title: Azure para desenvolvedores Go
 metadata:
-  title: "Azure para desenvolvedores Go - tutoriais, referência de API"
+  title: Azure para desenvolvedores Go - tutoriais, referência de API
   description: Comece a desenvolver com o SDK do Azure para linguagem Go usando os recursos de desenvolvedor abaixo.
   keywords: Azure, Go, golang, SDK, API
   author: sptramer
@@ -21,6 +21,7 @@ metadata:
   ms.translationtype: HT
   ms.contentlocale: pt-BR
   ms.lasthandoff: 03/01/2018
+  ms.locfileid: "29716003"
 sections:
 - items:
   - type: markdown
@@ -32,13 +33,13 @@ sections:
     className: cardsM
     columns: 2
     items:
-    - title: "Introdução"
+    - title: Introdução
       html: <p>Instale o SDK do Azure para linguagem Go</p>
       href: https://docs.microsoft.com/go/azure/azure-sdk-go-install
       image:
         src: https://docs.microsoft.com/media/common/i_get-started.svg
-    - title: "Exemplos de código"
-      html: "<p>Exemplos de código do Azure usando o Go</p>"
+    - title: Exemplos de código
+      html: <p>Exemplos de código do Azure usando o Go</p>
       image:
         src: https://docs.microsoft.com//media/common/i_code-samples.svg
       href: https://github.com/azure-samples/azure-sdk-for-go-samples
@@ -47,12 +48,12 @@ sections:
       href: https://docs.microsoft.com/go/azure/azure-sdk-go-tools
       image:
         src: https://docs.microsoft.com/media/common/i_download-install.svg
-    - title: "Referência de API"
+    - title: Referência de API
       html: <p>GoDoc para o SDK do Azure para linguagem Go</p>
       href: https://godoc.org/github.com/Azure/azure-sdk-for-go
       image:
         src: https://docs.microsoft.com/media/common/i_api-reference.svg
-- title: "Guias de início rápido do SDK do Go"
+- title: Guias de início rápido do SDK do Go
   items:
   - type: paragraph
     text: Saiba como usar o SDK do Azure para linguagem Go.
@@ -61,7 +62,7 @@ sections:
     className: cardsM
     columns: 2
     items:
-    - title: "Implantar uma máquina virtual de um modelo de recurso do Azure com Go"
+    - title: Implantar uma máquina virtual de um modelo de recurso do Azure com Go
       href: https://docs.microsoft.com/go/azure/azure-sdk-go-qs-vm
       image:
         src: https://docs.microsoft.com/azure/virtual-machines/media/index/virtualmachine.svg
@@ -78,8 +79,8 @@ sections:
     - type: list
       style: unordered
       items:
-      - html: "<a href=\"https://github.com/Azure-Samples/azure-sdk-for-go-samples/tree/master/iam\">Autenticar com os serviços do Azure</a>"
-      - html: "<a href=\"https://github.com/Azure-Samples/azure-sdk-for-go-samples/tree/master/compute\">Criar novas Máquinas Virtuais</a>"
-      - html: "<a href=\"https://github.com/Azure-Samples/azure-sdk-for-go-samples/tree/master/containerinstance\">Implantar um contêiner em Instâncias de Contêiner do Azure</a>"
-      - html: "<a href=\"https://github.com/Azure-Samples/azure-sdk-for-go-samples/tree/master/containerservice\">Criar um cluster no Serviço Kubernetes do Azure</a>"
-      - html: "<a href=\"https://github.com/Azure-Samples/azure-sdk-for-go-samples/tree/master/storage\">Trabalhar com serviços de Armazenamento do Azure</a>"
+      - html: <a href="https://github.com/Azure-Samples/azure-sdk-for-go-samples/tree/master/iam">Autenticar com os serviços do Azure</a>
+      - html: <a href="https://github.com/Azure-Samples/azure-sdk-for-go-samples/tree/master/compute">Criar novas Máquinas Virtuais</a>
+      - html: <a href="https://github.com/Azure-Samples/azure-sdk-for-go-samples/tree/master/containerinstance">Implantar um contêiner em Instâncias de Contêiner do Azure</a>
+      - html: <a href="https://github.com/Azure-Samples/azure-sdk-for-go-samples/tree/master/containerservice">Criar um cluster no Serviço Kubernetes do Azure</a>
+      - html: <a href="https://github.com/Azure-Samples/azure-sdk-for-go-samples/tree/master/storage">Trabalhar com serviços de Armazenamento do Azure</a>
