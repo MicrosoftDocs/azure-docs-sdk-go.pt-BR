@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.prod: azure
 ms.technology: azure-sdk-go
 ms.devlang: go
-ms.openlocfilehash: 1e122ab161766023ea146329a5edb13143699b8b
-ms.sourcegitcommit: b81b17cbb934399c195bfdcb87137aee935f5234
+ms.openlocfilehash: 25b46e3a1636c39e261ba11c6f8939d8721cc693
+ms.sourcegitcommit: 79d216c6b0442d0f3b3660ff2a34dc8b2049390c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34755525"
+ms.lasthandoff: 06/29/2018
+ms.locfileid: "37093151"
 ---
 # <a name="tools-for-developers-using-the-azure-sdk-for-go"></a>Ferramentas para desenvolvedores usando o SDK do Azure para linguagem Go
 
@@ -40,4 +40,4 @@ O Visual Studio Code é um editor leve que tem suporte abrangente para a linguag
 Há muitas maneiras de gerenciar suas dependências de pacote e fazer vendoring com Go, porque não há nenhuma solução oficial ainda. É a maneira recomendada para executar o gerenciamento com o gerenciador de dependência `dep`. O SDK do Azure para linguagem Go usa dep para seu vendoring e garante obter corretamente dependências para qualquer outro projeto usando o dep.
 
 > [!div class="nextstepaction"]
-> [Obter o gerente de dependência de dep](https://github.com/tools/godep)
+> [Obter o gerente de dependência de dep](https://github.com/golang/dep)
