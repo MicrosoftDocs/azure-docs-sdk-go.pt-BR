@@ -12,12 +12,12 @@ ms.technology: azure-sdk-go
 ms.devlang: go
 ms.service: active-directory
 ms.component: authentication
-ms.openlocfilehash: 370f5607b89c0044022f7987d06c3a55c9d6f352
-ms.sourcegitcommit: f08abf902b48f8173aa6e261084ff2cfc9043305
+ms.openlocfilehash: c7970167070bdf1f3fc75692f3e34268801c65df
+ms.sourcegitcommit: 181d4e0b164cf39b3feac346f559596bd19c94db
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32319876"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38066992"
 ---
 # <a name="authentication-methods-in-the-azure-sdk-for-go"></a>Métodos de autenticação no SDK do Azure para Go
 
@@ -31,21 +31,21 @@ O SDK do Azure para Go oferece vários tipos diferentes de autenticação, usand
 |---------------------|---------------------|
 | Autenticação baseada em certificado | Você tem um certificado X509 que foi configurado para um usuário do Azure Active Directory (AAD) ou uma entidade de serviço. Para saber mais, consulte [Introdução à autenticação baseada em certificado no Azure Active Directory]. |
 | Credenciais do cliente | Você tem uma entidade de serviço configurada que está definida para esse aplicativo ou para uma classe de aplicativos à qual ele pertence. Para saber mais, consulte [Criar uma entidade de serviço com a CLI do Azure 2.0]. |
-| MSI (Identidade do serviço gerenciado) | O aplicativo está em execução em um recurso do Azure que foi configurado com a MSI. Para saber mais, consulte [MSI (Identidade do serviço gerenciado) para recursos do Azure]. |
-| Token de dispositivo | Seu aplicativo foi projetado para ser usado __apenas__ interativamente, além disso, ele terá uma variedade de usuários, potencialmente de vários locatários do AAD. Os usuários têm acesso a um navegador da Web para fazer logon. Para obter mais informações, consulte [Usar a autenticação de token do dispositivo](#use-device-token-authentication).|
-| Nome de usuário/senha | Você tem um aplicativo interativo que não pode usar nenhum outro método de autenticação. Os usuários não têm a autenticação multifator habilitada para seu logon no AAD. |
+| MSI (Identidade do serviço gerenciado) | O aplicativo está em execução em um recurso do Azure que foi configurado com a MSI. Para saber mais, consulte [MSI (Identidade de serviço gerenciado) para recursos do Azure]. |
+| Token de dispositivo | Seu aplicativo foi projetado para ser usado __apenas__ interativamente, além disso, ele terá uma variedade de usuários, potencialmente de vários locatários do AAD. Os usuários têm acesso a um navegador da Web para fazer entrar. Para obter mais informações, consulte [Usar a autenticação de token do dispositivo](#use-device-token-authentication).|
+| Nome de usuário/senha | Você tem um aplicativo interativo que não pode usar nenhum outro método de autenticação. Os usuários não têm a autenticação multifator habilitada para entrar no AAD. |
 
 > [!IMPORTANT]
 > Se você usar um tipo de autenticação que não sejam as credenciais do cliente, seu aplicativo deve estar registrado no Active Directory do Azure. Para saber mais, [Integrando aplicativos com o Azure Active Directory](/azure/active-directory/develop/active-directory-integrating-applications).
 
 > [!NOTE]
-> A menos que você tenha requisitos especiais, evite a autenticação de nome de usuário e senha. Em situações em que o logon baseado em usuário for apropriado, pode ser usada a autenticação de token do dispositivo.
+> A menos que você tenha requisitos especiais, evite a autenticação de nome de usuário e senha. Em situações em que a entrada baseada em usuário for apropriada, pode ser usada a autenticação de token do dispositivo.
 
 [Introdução à autenticação baseada em certificado no Azure Active Directory]: /azure/active-directory/active-directory-certificate-based-authentication-get-started
 [Criar uma entidade de serviço com a CLI do Azure 2.0]: /cli/azure/create-an-azure-service-principal-azure-cli
-[MSI (Identidade do serviço gerenciado) para recursos do Azure]: /azure/active-directory/managed-service-identity/overview
+[MSI (Identidade de serviço gerenciado) para recursos do Azure]: /azure/active-directory/managed-service-identity/overview
 
-Esses tipos de autenticação estão disponíveis por meio de métodos diferentes. A [_Autenticação baseada em ambiente_](#use-environment-based-authentication) lê credenciais diretamente do ambiente do programa. A [_Autenticação baseada em arquivo_](#use-file-based-authentication) carrega um arquivo contendo as credenciais de entidade de serviço. A [_Autenticação baseada em cliente_](#use-an-authentication-client) usa um objeto em código Go e torna você responsável por fornecer as credenciais durante a execução do programa. Por fim, a [_autenticação de token do dispositivo_](#use-device-token-authentication) requer que os usuários façam logon interativamente por meio de um navegador da Web com um token, não podendo ser usada com autenticações baseadas em ambiente ou arquivo.
+Esses tipos de autenticação estão disponíveis por meio de métodos diferentes. A [_Autenticação baseada em ambiente_](#use-environment-based-authentication) lê credenciais diretamente do ambiente do programa. A [_Autenticação baseada em arquivo_](#use-file-based-authentication) carrega um arquivo contendo as credenciais de entidade de serviço. A [_Autenticação baseada em cliente_](#use-an-authentication-client) usa um objeto em código Go e torna você responsável por fornecer as credenciais durante a execução do programa. Por fim, a [_autenticação de token do dispositivo_](#use-device-token-authentication) requer que os usuários entrem interativamente por meio de um navegador da Web com um token, não podendo ser usada com autenticações baseadas em ambiente ou arquivo.
 
 Todos os tipos e funções de autenticação estão disponíveis no pacote `github.com/Azure/go-autorest/autorest/azure/auth`.
 
@@ -71,9 +71,9 @@ A tabela a seguir detalha as variáveis de ambiente que precisam ser definidas p
 | | `AZURE_CERTIFICATE_PASSWORD` | A senha para o certificado do cliente. |
 | __Nome de usuário/senha__ | `AZURE_TENANT_ID` | A ID do locatário do Active Directory à qual o usuário pertence. |
 | | `AZURE_CLIENT_ID` | A ID de cliente do aplicativo. |
-| | `AZURE_USERNAME` | O nome de usuário para fazer logon. |
-| | `AZURE_PASSWORD` | A senha para fazer logon. |
-| __MSI__ | | A MSI não requer que nenhuma credencial seja definida. O aplicativo deve estar em execução em um recurso do Azure configurado para usar a MSI. Para obter detalhes, consulte [MSI (Identidade do serviço gerenciado) para recursos do Azure]. |
+| | `AZURE_USERNAME` | O nome de usuário com o qual entrar. |
+| | `AZURE_PASSWORD` | A senha com a qual entrar. |
+| __MSI__ | | A MSI não requer que nenhuma credencial seja definida. O aplicativo deve estar em execução em um recurso do Azure configurado para usar a MSI. Para obter detalhes, consulte [MSI (Identidade de serviço gerenciado) para recursos do Azure]. |
 
 Caso precise se conectar a um ponto de extremidade de nuvem ou de gerenciamento que não seja o padrão de nuvem pública do Azure, também é possível definir as seguintes variáveis de ambiente. Os motivos mais comuns para defini-las são: se você usa o Azure Stack, uma nuvem em uma região geográfica diferente ou o modelo de implantação clássico do Azure.
 
@@ -107,7 +107,7 @@ O `ResourceManagerURL` varia de acordo com o nome da região, nome do computador
 | Kit de desenvolvimento | `https://management.local.azurestack.external/` |
 | Sistemas Integrados | `https://management.(region).ext-(machine-name).(FQDN)` |
 
-Para obter mais detalhes sobre como usar o SDK do Azure para Go no Azure Stack, confira [Usar perfis de versão de API com o Go no Azure Stack](https://docs.microsoft.com/en-us/azure/azure-stack/user/azure-stack-version-profiles-go)
+Para obter mais detalhes sobre como usar o SDK do Azure para Go no Azure Stack, confira [Usar perfis de versão de API com o Go no Azure Stack](https://docs.microsoft.com/azure/azure-stack/user/azure-stack-version-profiles-go)
 
 
 ## <a name="use-file-based-authentication"></a>Usar a autenticação baseada em arquivo
@@ -131,7 +131,7 @@ Para obter mais informações sobre como usar as entidades de serviço e como ge
 
 ## <a name="use-device-token-authentication"></a>Usar autenticação de token do dispositivo
 
-Caso queira que os usuários façam logon interativamente, a melhor maneira de oferecer essa capacidade é por meio da autenticação de token do dispositivo. Esse fluxo de autenticação passa ao usuário um token para ser colado em um site de logon da Microsoft, onde eles, então, fazem logon com uma conta do Azure Active Directory (AAD). Esse método de autenticação oferece suporte a contas que têm a autenticação multifator habilitada, ao contrário de autenticação padrão de nome de usuário/senha.
+Caso queira que os usuários entrem interativamente, a melhor maneira de oferecer essa capacidade é por meio da autenticação de token do dispositivo. Esse fluxo de autenticação passa ao usuário um token para ser colado em um site de entrada da Microsoft, onde eles, então, autenticam com uma conta do Azure Active Directory (AAD). Esse método de autenticação oferece suporte a contas que têm a autenticação multifator habilitada, ao contrário de autenticação padrão de nome de usuário/senha.
 
 Para usar uma autenticação de token do dispositivo, crie um autorizador [DeviceFlowConfig](https://godoc.org/github.com/Azure/go-autorest/autorest/azure/auth#DeviceFlowConfig) com a função [NewDeviceFlowConfig](https://godoc.org/github.com/Azure/go-autorest/autorest/azure/auth#NewDeviceFlowConfig). Chame o [Autorizador](https://godoc.org/github.com/Azure/go-autorest/autorest/azure/auth#DeviceFlowConfig.Authorizer) no objeto resultante para iniciar o processo de autenticação. A autenticação de fluxo do dispositivo bloqueia a execução do programa até que todo o fluxo de autenticação seja concluído.
 

@@ -10,16 +10,16 @@ ms.prod: azure
 ms.technology: azure-sdk-go
 ms.service: virtual-machines
 ms.devlang: go
-ms.openlocfilehash: 1fbcc54df2a2aebce56c5a5800361f3d3aed1ccc
-ms.sourcegitcommit: f08abf902b48f8173aa6e261084ff2cfc9043305
+ms.openlocfilehash: 7592e8617436a76dd27cac5269971051982425bf
+ms.sourcegitcommit: 181d4e0b164cf39b3feac346f559596bd19c94db
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32319927"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38067009"
 ---
 # <a name="quickstart-deploy-an-azure-virtual-machine-from-a-template-with-the-azure-sdk-for-go"></a>Início rápido: implantar uma máquina virtual do Azure de um modelo com o SDK do Azure para linguagem Go
 
-Este início rápido foca na implantação de recursos de um modelo com o SDK do Azure para linguagem Go. Os modelos são instantâneos de todos os recursos contidos em um [grupo de recursos do Azure](https://docs.microsoft.com/en-us/azure/azure-resource-manager/resource-group-overview). Ao longo do processo, você vai se familiarizar com a funcionalidade e as convenções do SDK enquanto executa uma tarefa útil.
+Este início rápido foca na implantação de recursos de um modelo com o SDK do Azure para linguagem Go. Os modelos são instantâneos de todos os recursos contidos em um [grupo de recursos do Azure](https://docs.microsoft.com/azure/azure-resource-manager/resource-group-overview). Ao longo do processo, você vai se familiarizar com a funcionalidade e as convenções do SDK enquanto executa uma tarefa útil.
 
 No final deste início rápido, você terá uma VM em execução na qual pode entrar com um nome de usuário e senha.
 
@@ -35,8 +35,7 @@ Caso use uma instalação local da CLI do Azure, este início rápido requer a C
 
 ## <a name="create-a-service-principal"></a>Criar uma entidade de serviço
 
-
-Para efetuar logon em modo não interativo com um aplicativo, você precisa de uma entidade de serviço. As entidades de serviço fazem parte do controle de acesso baseado em função (RBAC), que cria uma identidade de usuário exclusiva. Para criar uma nova entidade de serviço com a CLI, execute o comando a seguir:
+Para entrar em modo não interativo no Azure com um aplicativo, você precisa de uma entidade de serviço. As entidades de serviço fazem parte do controle de acesso baseado em função (RBAC), que cria uma identidade de usuário exclusiva. Para criar uma nova entidade de serviço com a CLI, execute o comando a seguir:
 
 ```azurecli-interactive
 az ad sp create-for-rbac --name az-go-vm-quickstart --sdk-auth > quickstart.auth
