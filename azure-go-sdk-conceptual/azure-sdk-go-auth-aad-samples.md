@@ -10,21 +10,21 @@ ms.prod: azure
 ms.technology: azure-sdk-go
 ms.service: active-directory
 ms.devlang: go
-ms.openlocfilehash: 278ee81e180287abf3152779821b7dfb76a487e3
-ms.sourcegitcommit: 2a3bd491e087a1d0e7d269bed896c029357d62a6
+ms.openlocfilehash: dfaed972f23daa92fcec686cf34ee636aa624b9a
+ms.sourcegitcommit: 0f581979216f7c9d4913681a6d9f6fe09af26e43
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38988000"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39475867"
 ---
-# <a name="azure-sdk-for-go-samples-for-authentication-and-aad"></a><span data-ttu-id="9b0b8-103">Exemplos do SDK do Azure para linguagem Go de autenticação e do AAD</span><span class="sxs-lookup"><span data-stu-id="9b0b8-103">Azure SDK for Go samples for authentication and AAD</span></span>
+# <a name="azure-sdk-for-go-samples-for-authentication-and-aad"></a><span data-ttu-id="3cf9f-103">Exemplos do SDK do Azure para linguagem Go de autenticação e do AAD</span><span class="sxs-lookup"><span data-stu-id="3cf9f-103">Azure SDK for Go samples for authentication and AAD</span></span>
 
-<span data-ttu-id="9b0b8-104">A tabela a seguir é vinculada a exemplos selecionados do código-fonte da linguagem Go que você pode usar para autenticar com o SDK do Azure para linguagem Go e trabalhar com os serviços do Azure Active Directory (AAD).</span><span class="sxs-lookup"><span data-stu-id="9b0b8-104">The following table links to selected samples of Go source code that you can use to authenticate with the Azure SDK for Go and work with Azure Active Directory (AAD) services.</span></span>
+<span data-ttu-id="3cf9f-104">A tabela a seguir é vinculada a exemplos selecionados do código-fonte da linguagem Go que você pode usar para autenticar com o SDK do Azure para linguagem Go e trabalhar com os serviços do Azure Active Directory (AAD).</span><span class="sxs-lookup"><span data-stu-id="3cf9f-104">The following table links to selected samples of Go source code that you can use to authenticate with the Azure SDK for Go and work with Azure Active Directory (AAD) services.</span></span>
 
-<span data-ttu-id="9b0b8-105">Todos os exemplos do SDK do Azure para linguagem Go estão disponíveis no [GitHub](https://github.com/Azure-Samples/azure-sdk-for-go-samples).</span><span class="sxs-lookup"><span data-stu-id="9b0b8-105">All samples for the Azure SDK for Go are available on [GitHub](https://github.com/Azure-Samples/azure-sdk-for-go-samples).</span></span>
+<span data-ttu-id="3cf9f-105">Todos os exemplos do SDK do Azure para linguagem Go estão disponíveis no [GitHub](https://github.com/Azure-Samples/azure-sdk-for-go-samples).</span><span class="sxs-lookup"><span data-stu-id="3cf9f-105">All samples for the Azure SDK for Go are available on [GitHub](https://github.com/Azure-Samples/azure-sdk-for-go-samples).</span></span>
 
-| <span data-ttu-id="9b0b8-106">NOME</span><span class="sxs-lookup"><span data-stu-id="9b0b8-106">Name</span></span> | <span data-ttu-id="9b0b8-107">DESCRIÇÃO</span><span class="sxs-lookup"><span data-stu-id="9b0b8-107">Description</span></span> |
+| <span data-ttu-id="3cf9f-106">NOME</span><span class="sxs-lookup"><span data-stu-id="3cf9f-106">Name</span></span> | <span data-ttu-id="3cf9f-107">DESCRIÇÃO</span><span class="sxs-lookup"><span data-stu-id="3cf9f-107">Description</span></span> |
 |------|-------------|
-| [<span data-ttu-id="9b0b8-108">iam/oauth</span><span class="sxs-lookup"><span data-stu-id="9b0b8-108">iam/oauth</span></span>](https://github.com/Azure-Samples/azure-sdk-for-go-samples/blob/master/iam/oauth.go) | <span data-ttu-id="9b0b8-109">Como autenticar com o Azure para usar os serviços.</span><span class="sxs-lookup"><span data-stu-id="9b0b8-109">How to authenticate with Azure to use services.</span></span> |
-| [<span data-ttu-id="9b0b8-110">authorization/auth</span><span class="sxs-lookup"><span data-stu-id="9b0b8-110">authorization/auth</span></span>](https://github.com/Azure-Samples/azure-sdk-for-go-samples/blob/master/authorization/auth.go) | <span data-ttu-id="9b0b8-111">Adicionar, remover e inspecionar as funções do AAD.</span><span class="sxs-lookup"><span data-stu-id="9b0b8-111">Add, remove, and inspect AAD roles.</span></span> |
-| [<span data-ttu-id="9b0b8-112">graphrbac/graph</span><span class="sxs-lookup"><span data-stu-id="9b0b8-112">graphrbac/graph</span></span>](https://github.com/Azure-Samples/azure-sdk-for-go-samples/blob/master/graphrbac/graph.go) | <span data-ttu-id="9b0b8-113">Inspecionar e criar entidades de serviço e aplicativos do AAD.</span><span class="sxs-lookup"><span data-stu-id="9b0b8-113">Inspect and create service principals and AAD applications.</span></span> <span data-ttu-id="9b0b8-114">Adicionar segredos a uma entidade de serviço ou aplicativo existentes.</span><span class="sxs-lookup"><span data-stu-id="9b0b8-114">Add secrets to an existing service principal or application.</span></span> |
+| [<span data-ttu-id="3cf9f-108">interno/iam/autorizadores</span><span class="sxs-lookup"><span data-stu-id="3cf9f-108">internal/iam/authorizers</span></span>](https://github.com/Azure-Samples/azure-sdk-for-go-samples/blob/master/internal/iam/authorizers.go) | <span data-ttu-id="3cf9f-109">Como autenticar com o Azure para usar os serviços.</span><span class="sxs-lookup"><span data-stu-id="3cf9f-109">How to authenticate with Azure to use services.</span></span> |
+| [<span data-ttu-id="3cf9f-110">autorização/autorização</span><span class="sxs-lookup"><span data-stu-id="3cf9f-110">authorization/authorization</span></span>](https://github.com/Azure-Samples/azure-sdk-for-go-samples/blob/master/authorization/authorization.go) | <span data-ttu-id="3cf9f-111">Adicionar, remover e inspecionar as funções do AAD.</span><span class="sxs-lookup"><span data-stu-id="3cf9f-111">Add, remove, and inspect AAD roles.</span></span> |
+| [<span data-ttu-id="3cf9f-112">graphrbac/graph</span><span class="sxs-lookup"><span data-stu-id="3cf9f-112">graphrbac/graph</span></span>](https://github.com/Azure-Samples/azure-sdk-for-go-samples/blob/master/graphrbac/graph.go) | <span data-ttu-id="3cf9f-113">Inspecionar e criar entidades de serviço e aplicativos do AAD.</span><span class="sxs-lookup"><span data-stu-id="3cf9f-113">Inspect and create service principals and AAD applications.</span></span> <span data-ttu-id="3cf9f-114">Adicionar segredos a uma entidade de serviço ou aplicativo existentes.</span><span class="sxs-lookup"><span data-stu-id="3cf9f-114">Add secrets to an existing service principal or application.</span></span> |
