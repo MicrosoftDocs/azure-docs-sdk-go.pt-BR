@@ -10,12 +10,12 @@ ms.prod: azure
 ms.technology: azure-sdk-go
 ms.service: active-directory
 ms.devlang: go
-ms.openlocfilehash: 278ee81e180287abf3152779821b7dfb76a487e3
-ms.sourcegitcommit: 2a3bd491e087a1d0e7d269bed896c029357d62a6
+ms.openlocfilehash: dfaed972f23daa92fcec686cf34ee636aa624b9a
+ms.sourcegitcommit: 0f581979216f7c9d4913681a6d9f6fe09af26e43
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38988000"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39475867"
 ---
 # <a name="azure-sdk-for-go-samples-for-authentication-and-aad"></a>Exemplos do SDK do Azure para linguagem Go de autenticação e do AAD
 
@@ -25,6 +25,6 @@ Todos os exemplos do SDK do Azure para linguagem Go estão disponíveis no [GitH
 
 | NOME | DESCRIÇÃO |
 |------|-------------|
-| [iam/oauth](https://github.com/Azure-Samples/azure-sdk-for-go-samples/blob/master/iam/oauth.go) | Como autenticar com o Azure para usar os serviços. |
-| [authorization/auth](https://github.com/Azure-Samples/azure-sdk-for-go-samples/blob/master/authorization/auth.go) | Adicionar, remover e inspecionar as funções do AAD. |
+| [interno/iam/autorizadores](https://github.com/Azure-Samples/azure-sdk-for-go-samples/blob/master/internal/iam/authorizers.go) | Como autenticar com o Azure para usar os serviços. |
+| [autorização/autorização](https://github.com/Azure-Samples/azure-sdk-for-go-samples/blob/master/authorization/authorization.go) | Adicionar, remover e inspecionar as funções do AAD. |
 | [graphrbac/graph](https://github.com/Azure-Samples/azure-sdk-for-go-samples/blob/master/graphrbac/graph.go) | Inspecionar e criar entidades de serviço e aplicativos do AAD. Adicionar segredos a uma entidade de serviço ou aplicativo existentes. |
