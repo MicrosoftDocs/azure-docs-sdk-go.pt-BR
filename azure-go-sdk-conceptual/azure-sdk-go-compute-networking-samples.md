@@ -9,12 +9,12 @@ ms.topic: sample
 ms.technology: azure-sdk-go
 ms.service: virtual-machines
 ms.devlang: go
-ms.openlocfilehash: d570ad8598ae06633d0010245c207641161ee446
-ms.sourcegitcommit: 8b9e10b960150dc08f046ab840d6a5627410db29
+ms.openlocfilehash: 20c264157905ea870b8c432d64a204974a1bc964
+ms.sourcegitcommit: c435f6602524565d340aac5506be5e955e78f16c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44059077"
+ms.lasthandoff: 09/12/2018
+ms.locfileid: "44711950"
 ---
 # <a name="azure-sdk-for-go-samples-for-compute-and-networking"></a>Exemplos do SDK do Azure para linguagem Go de computação e rede
 
@@ -28,4 +28,4 @@ Todos os exemplos do SDK do Azure para linguagem Go estão disponíveis no [GitH
 | [computação/vm_disk](https://github.com/Azure-Samples/azure-sdk-for-go-samples/blob/master/compute/vm_disk.go) | Criar, anexar, desanexar, atualizar e criptografar os discos de dados para uma VM. |
 | [computação/vm](https://github.com/Azure-Samples/azure-sdk-for-go-samples/blob/master/compute/vm.go) | Criar, atualizar, desativar e gerenciar máquinas virtuais. |
 | [computação/vm_with_availabilityset](https://github.com/Azure-Samples/azure-sdk-for-go-samples/blob/master/compute/vm_with_availabilityset.go) | Criar conjuntos de disponibilidade e balanceadores de carga para VMs. |
-| [computação/vm_with_identity](https://github.com/Azure-Samples/azure-sdk-for-go-samples/blob/master/compute/vm_with_identity.go) | Criar e gerenciar as Identidades de Serviço Gerenciado (arquivos .msi) para VMs. |
+| [computação/vm_with_identity](https://github.com/Azure-Samples/azure-sdk-for-go-samples/blob/master/compute/vm_with_identity.go) | Crie e modifique as identidades gerenciadas para os recursos do Azure. | 
