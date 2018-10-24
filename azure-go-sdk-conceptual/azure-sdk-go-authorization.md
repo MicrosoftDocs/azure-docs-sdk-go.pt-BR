@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.technology: azure-sdk-go
 ms.devlang: go
 ms.component: authentication
-ms.openlocfilehash: f5c2c56e43828f0bedad0b5781dc71991ce1fd3e
-ms.sourcegitcommit: 172f81dd6e4c6a275dc8031815aa87cdb488cbf0
+ms.openlocfilehash: c2c3dccfa8da5cfe57fee0b90139002068982560
+ms.sourcegitcommit: 887b15afcdeaf926a5f3d21b64e4045167fd062c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47231668"
+ms.lasthandoff: 10/21/2018
+ms.locfileid: "49481975"
 ---
 # <a name="authentication-methods-in-the-azure-sdk-for-go"></a>Métodos de autenticação no SDK do Azure para Go
 
@@ -70,20 +70,21 @@ Se um tipo de autenticação não tiver valores definidos ou for recusado, o SDK
 
 A tabela a seguir detalha as variáveis de ambiente que precisam ser definidas para cada tipo de autenticação com suporte da autenticação baseada em ambiente.
 
-| Tipo de autenticação | Variável de ambiente | DESCRIÇÃO |
-| ------------------- | -------------------- | ----------- |
-| __Credenciais do cliente__ | `AZURE_TENANT_ID` | A ID do locatário do Active Directory à qual pertence a entidade de serviço. |
-| | `AZURE_CLIENT_ID` | O nome ou a ID da entidade de serviço. |
-| | `AZURE_CLIENT_SECRET` | O segredo associado à entidade de serviço. |
-| __Certificate__ | `AZURE_TENANT_ID` | A ID do locatário do Active Directory com qual o certificado está registrado. |
-| | `AZURE_CLIENT_ID` | A ID de cliente do aplicativo associada ao certificado. |
-| | `AZURE_CERTIFICATE_PATH` | O caminho para o arquivo do certificado do cliente. |
-| | `AZURE_CERTIFICATE_PASSWORD` | A senha para o certificado do cliente. |
-| __Nome de usuário/senha__ | `AZURE_TENANT_ID` | A ID do locatário do Active Directory à qual o usuário pertence. |
-| | `AZURE_CLIENT_ID` | A ID de cliente do aplicativo. |
-| | `AZURE_USERNAME` | O nome de usuário com o qual entrar. |
-| | `AZURE_PASSWORD` | A senha com a qual entrar. |
-| __Identidade gerenciada__ | | Nenhuma credencial é necessária para a autenticação da identidade gerenciada. O aplicativo deve estar em execução em um recurso do Azure configurado para usar as identidades gerenciadas. Para obter mais detalhes, confira [Identidades gerenciadas para os recursos do Azure]. |
+
+|  Tipo de autenticação   |     Variável de ambiente     |                                                                                                     DESCRIÇÃO                                                                                                      |
+|------------------------|------------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| **Credenciais do cliente** |      `AZURE_TENANT_ID`       |                                                                    A ID do locatário do Active Directory à qual pertence a entidade de serviço.                                                                     |
+|                        |      `AZURE_CLIENT_ID`       |                                                                                       O nome ou a ID da entidade de serviço.                                                                                       |
+|                        |    `AZURE_CLIENT_SECRET`     |                                                                                  O segredo associado à entidade de serviço.                                                                                   |
+|    **Certificate**     |      `AZURE_TENANT_ID`       |                                                                   A ID do locatário do Active Directory com qual o certificado está registrado.                                                                    |
+|                        |      `AZURE_CLIENT_ID`       |                                                                              A ID de cliente do aplicativo associada ao certificado.                                                                              |
+|                        |   `AZURE_CERTIFICATE_PATH`   |                                                                                       O caminho para o arquivo do certificado do cliente.                                                                                       |
+|                        | `AZURE_CERTIFICATE_PASSWORD` |                                                                                       A senha para o certificado do cliente.                                                                                       |
+| **Nome de usuário/senha**  |      `AZURE_TENANT_ID`       |                                                                           A ID do locatário do Active Directory à qual o usuário pertence.                                                                           |
+|                        |      `AZURE_CLIENT_ID`       |                                                                                              A ID de cliente do aplicativo.                                                                                              |
+|                        |       `AZURE_USERNAME`       |                                                                                            O nome de usuário com o qual entrar.                                                                                             |
+|                        |       `AZURE_PASSWORD`       |                                                                                            A senha com a qual entrar.                                                                                             |
+|  **Identidade gerenciada**  |                              | Nenhuma credencial é necessária para a autenticação da identidade gerenciada. O aplicativo deve estar em execução em um recurso do Azure configurado para usar as identidades gerenciadas. Para obter mais detalhes, confira [Identidades gerenciadas para os recursos do Azure]. |
 
 Para se conectar a um ponto de extremidade de gerenciamento ou de nuvem que não seja o padrão de nuvem pública do Azure, defina as seguintes variáveis de ambiente. Se você usa o Azure Stack, os motivos mais comuns são: uma nuvem em uma região geográfica diferente ou o modelo de implantação clássico.
 
